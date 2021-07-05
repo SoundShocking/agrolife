@@ -1,0 +1,19 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'vendor';
+@import 'settings';
+
+@import './components/header';
+@import './components/menu';
+@import './components/home';
+@import './components/products-slider';
+@import './components/product';
+@import './components/advantages';
+@import './components/brands';
+@import './components/about-shop';
+@import './components/footer';
+@import './components/blog';
+@import './components/pagination';
+@import './components/catalog';
+@import './components/filter';

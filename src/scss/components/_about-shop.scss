@@ -1,0 +1,51 @@
+.about-shop {
+  &__text {
+    position: relative;
+    height: 130px;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      height: 30px;
+      background: linear-gradient(180deg, transparent, var(--color-white));
+    }
+
+    &--show {
+      height: auto;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--color-green);
+    margin: 30px 0 20px;
+  }
+
+  p {
+    color: var(--color-gray);
+    line-height: 19px;
+  }
+
+  &__read-more {
+    color: var(--color-green);
+    margin-top: 20px;
+    border-bottom: 1px dashed currentColor;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-orange);
+      transition: color 0.3s;
+    }
+  }
+}

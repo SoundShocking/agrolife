@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('html/header.html')
+    <main class="main">
+      <div class="catalog">
+        <div class="container catalog__container">
+          <aside class="catalog__filter filter">
+            <div class="filter__item filter__item--selected">
+              <div class="filter__header filter__header--selected">
+                <div class="filter__title">Вы выбрали</div>
+                <button class="filter__clear">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#filter-times"></use>
+                  </svg>
+                  Очистить все
+                </button>
+              </div>
+              <div class="filter__body">
+                <ul class="filter__selected selected-filter__list">
+                  <li class="selected-filter__item">
+                    <button class="selected-filter__btn">
+                      Производитель: <span>LibraSeeds</span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#filter-times"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="selected-filter__item">
+                    <button class="selected-filter__btn">
+                      Упаковка: <span>50 грамм</span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#filter-times"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="selected-filter__item">
+                    <button class="selected-filter__btn">
+                      Срок созревания: <span>Очень ранний</span>
+                      <svg>
+                        <use xlink:href="img/sprite.svg#filter-times"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="filter__item filter__item--open">
+              <div class="filter__header">
+                <div class="filter__title">Цена, ₴</div>
+                <svg class="filter__toggle">
+                  <use xlink:href="img/sprite.svg#chevron-down-solid"></use>
+                </svg>
+              </div>
+              <div class="filter__body">
+                <div class="filter-price">
+                  <div class="filter-price__inputs">
+                    <input type="number" min="100" max="10000" placeholder="100" class="filter-price__input"
+                      id="price-0">
+                    <input type="number" min="100" max="10000" placeholder="10000" class="filter-price__input"
+                      id="price-1">
+                  </div>
+                  <div class="filter-price__slider"></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter__item filter__item--open">
+              <div class="filter__header">
+                <div class="filter__title">Производитель</div>
+                <svg class="filter__toggle">
+                  <use xlink:href="img/sprite.svg#chevron-down-solid"></use>
+                </svg>
+              </div>
+              <div class="filter__body">
+                <ul class="filter__options">
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Bejo <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Clause <span>(10)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Cora Seeds <span>(5)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Enza Zaden <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Ergon seeds <span>(4)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Euroseed <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Griffaton <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Hazera <span>(15)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Hollar Seeds <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Hortus <span>(2)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        INNOVA SEEDS <span>(7)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Kitano Seeds <span>(9)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Lark Seeds <span>(8)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        LibraSeeds <span>(10)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Lucky Seed <span>(12)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        May Seeds <span>(2)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Nunhems <span>(9)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Rijk Zwaan <span>(9)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Sais <span>(10)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Sakata <span>(8)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Seminis <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Semo <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Syngenta <span>(9)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Takii Seeds <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Yuksel Seeds <span>(6)</span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter__item filter__item--open">
+              <div class="filter__header">
+                <div class="filter__title">Цена</div>
+                <svg class="filter__toggle">
+                  <use xlink:href="img/sprite.svg#chevron-down-solid"></use>
+                </svg>
+              </div>
+              <div class="filter__body">
+                <ul class="filter__options">
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        1 грамм <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        5 грамм <span>(15)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        10 грамм <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        50 грамм <span>(12)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        500 грамм <span>(10)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        1 000 семян <span>(51)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        5 000 семян <span>(63)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        10 000 семян <span>(21)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        100 000 семян <span>(2)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        1 000 драже <span>(37)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        5 000 драже <span>(47)</span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter__item">
+              <div class="filter__header">
+                <div class="filter__title">Срок созревания</div>
+                <svg class="filter__toggle">
+                  <use xlink:href="img/sprite.svg#chevron-down-solid"></use>
+                </svg>
+              </div>
+              <div class="filter__body">
+                <ul class="filter__options">
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Очень ранний <span>(14)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Ранний <span>(87)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Среднеранний <span>(21)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Средний <span>(21)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Среднепоздний <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        Поздний <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter__item">
+              <div class="filter__header">
+                <div class="filter__title">Средний вес</div>
+                <svg class="filter__toggle">
+                  <use xlink:href="img/sprite.svg#chevron-down-solid"></use>
+                </svg>
+              </div>
+              <div class="filter__body">
+                <ul class="filter__options">
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        10-15 кг <span>(5)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        6-8 кг <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        8-12 кг <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        9-12 кг <span>(2)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        до 10 кг <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        1-3 кг <span>(3)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        3-5 кг <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        1-5 кг <span>(9)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        5-7 кг <span>(1)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        7-10 кг <span>(15)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        5-10 кг <span>(47)</span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="filter__option">
+                    <label class="filter-checkbox">
+                      <input type="checkbox" class="filter-checkbox__input visually-hidden">
+                      <div class="filter-checkbox__text">
+                        10 кг и больше <span>(60)</span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+
+          <div class="catalog__products catalog-products">
+            <h2 class="catalog__title page-title">Семена Арбуза</h2>
+
+            <div class="catalog__toolbar catalog-toolbar">
+              <div class="catalog-toolbar__view catalog-view">
+                <button class="catalog-view__item catalog-view__item--active">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#grip-horizontal-solid"></use>
+                  </svg>
+                </button>
+                <button class="catalog-view__item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#list-solid"></use>
+                  </svg>
+                </button>
+              </div>
+              <select name="" id="" class="catalog-toolbar__sort-by">
+                <option value="cheap">От дешевых к дорогим</option>
+                <option value="expensive">От дорогих к дешевым</option>
+                <option value="popularity">Популярные</option>
+                <option value="novelty">Новинки</option>
+                <option value="rank">По рейтингу</option>
+              </select>
+              <div class="catalog-toolbar__amount">Товары 1-15 из 42</div>
+              <select name="" id="" class="catalog-toolbar__per-page">
+                <option value="15">15 на странице</option>
+                <option value="30">30 на странице</option>
+                <option value="45">45 на странице</option>
+              </select>
+            </div>
+
+            <ul class="catalog__grid catalog-grid">
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog1.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog2.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  ПРИМАОРАНЖ F1 / PRIMAORANGE F1 — Арбуз, Semo
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog3.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog4.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog5.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog6.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog7.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog8.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog9.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog10.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog11.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog12.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog13.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog14.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-grid__item catalog-product">
+                <a href="#" class="catalog-product__image">
+                  <img src="img/catalog15.jpg" alt="">
+                </a>
+                <a href="#" class="catalog-product__title">
+                  РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                </a>
+                <div class="catalog-product__price price">
+                  <span class="price__normal">₴ 2 210</span>
+                </div>
+                <div class="catalog-product__actions">
+                  <a href="#" class="catalog-product__actions--buy">
+                    Купить
+                  </a>
+                  <button class="catalog-product__actions--wishlist">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                  </button>
+                  <button class="catalog-product__actions--compare">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#compare"></use>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="catalog-product__properties catalog-properties">
+                  <li class="catalog-properties__item">
+                    Вегетационный период: очень ранний
+                  </li>
+                  <li class="catalog-properties__item">
+                    Средний вес: 3-4 кг.
+                  </li>
+                  <li class="catalog-properties__item">
+                    Плод округлой формы
+                  </li>
+                  <li class="catalog-properties__item">
+                    Кожура тонкая, зеленая с темно-зелеными полосами.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            @include('html/pagination.html')
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('html/footer.html')
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

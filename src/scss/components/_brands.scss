@@ -1,0 +1,77 @@
+.brands {
+  &__slider {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #eee;
+    padding: 5px 50px;
+
+    &-navigation {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+      padding: 0px 8px;
+    }
+
+    &-prev,
+    &-next {
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      border: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: var(--color-green);
+        color: var(--color-white);
+        border-color: var(--color-green);
+        transition: all 0.3s;
+      }
+
+      svg {
+        width: 8px;
+        height: 13px;
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  &__slide {
+    width: auto;
+    max-width: 170px;
+    height: 60px;
+
+    &:hover {
+      img {
+        transition: filter 0.3s;
+        filter: grayscale(0);
+      }
+    }
+
+    &-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      vertical-align: top;
+      max-height: 100%;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+}

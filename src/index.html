@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('html/header.html')
+    <main class="main">
+      <section class="home__menu-hero container">
+        @include('html/menu.html')
+        @include('html/home-hero.html')
+      </section>
+
+      <div class="container">
+        <div class="products-carousel">
+          <div class="products-carousel__container">
+            <div class="products-carousel__header">
+              <div class="products-carousel__header-title">
+                <svg class="products-carousel__header-icon">
+                  <use xlink:href="img/sprite.svg#flyers"></use>
+                </svg>
+                Товары недели
+              </div>
+            </div>
+
+            <div class="products-carousel__slider" id="products_of_the_week">
+              <div class="products-carousel__navigation">
+                <button class="products-carousel__prev">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                  </svg>
+                </button>
+                <button class="products-carousel__next">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/week1.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title product__title--fat">
+                        АЙВОНА / AUVONA — салат, Rijk Zwaan
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__new">₴ 1 795</span>
+                        <span class="price__old">₴ 1 995</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/week2.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title product__title--fat">
+                        КАРАМЕЛЬ F1 / CARAMEL F1 - дыня, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__new">₴ 1 795</span>
+                        <span class="price__old">₴ 1 995</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/week3.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title product__title--fat">
+                        МИРАФЛОРЕС F1 / MIRAFLORES F1 - морковь, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__new">₴ 1 795</span>
+                        <span class="price__old">₴ 1 995</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/week4.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title product__title--fat">
+                        СОЛАНОР F1 / SOLANOR F1 – перец сладкий, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__new">₴ 1 795</span>
+                        <span class="price__old">₴ 1 995</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-carousel">
+          <div class="products-carousel__container">
+            <div class="products-carousel__header">
+              <div class="products-carousel__header-title">
+                <svg class="products-carousel__header-icon">
+                  <use xlink:href="img/sprite.svg#new"></use>
+                </svg>
+                Новинки
+              </div>
+            </div>
+
+            <div class="products-carousel__slider" id="new">
+              <div class="products-carousel__navigation">
+                <button class="products-carousel__prev">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                  </svg>
+                </button>
+                <button class="products-carousel__next">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new1.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЦЕЛИН F1 / CELIN F1 - Арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 2 210</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new2.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 545</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new3.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 745</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new4.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЛЕЖЕНД F1 / LEGEND F1 – кукуруза сахарная, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 545</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new5.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 230</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="home__fluid-banner">
+          <img src="img/banner3.jpg" alt="">
+        </a>
+
+        <div class="home__carousel--mini">
+          <div class="products-carousel">
+            <div class="products-carousel__container">
+              <div class="products-carousel__header">
+                <div class="products-carousel__header-title products-carousel__header-title--mini">
+                  Товары месяца
+                </div>
+              </div>
+
+              <div class="products-carousel__slider" id="products_of_the_month">
+                <div class="products-carousel__navigation">
+                  <button class="products-carousel__prev">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                    </svg>
+                  </button>
+                  <button class="products-carousel__next">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini1.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__new">₴ 1 550</span>
+                            <span class="price-mini__old">₴ 1 795</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini2.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 1 545</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini3.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 659</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-carousel">
+            <div class="products-carousel__container">
+              <div class="products-carousel__header products-carousel__header--hits">
+                <div
+                  class="products-carousel__header-title products-carousel__header-title--mini products-carousel__header-title--hits">
+                  Хиты продаж
+                </div>
+              </div>
+
+              <div class="products-carousel__slider" id="hits">
+                <div class="products-carousel__navigation">
+                  <button class="products-carousel__prev">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                    </svg>
+                  </button>
+                  <button class="products-carousel__next">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini4.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__new">₴ 1 550</span>
+                            <span class="price-mini__old">₴ 1 795</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini5.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 1 545</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini6.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 659</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-carousel">
+            <div class="products-carousel__container">
+              <div class="products-carousel__header products-carousel__header--discount">
+                <div
+                  class="products-carousel__header-title products-carousel__header-title--mini products-carousel__header-title--discount">
+                  Скидки
+                </div>
+              </div>
+
+              <div class="products-carousel__slider" id="discount">
+                <div class="products-carousel__navigation">
+                  <button class="products-carousel__prev">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                    </svg>
+                  </button>
+                  <button class="products-carousel__next">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini7.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__new">₴ 1 550</span>
+                            <span class="price-mini__old">₴ 1 795</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini8.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 1 545</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-mini">
+                        <a href="#" class="product-mini__image">
+                          <img src="img/mini9.jpg" alt="">
+                        </a>
+                        <div class="product-mini__info">
+                          <a href="#" class="product-mini__title">
+                            РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                          </a>
+                          <div class="product-mini__price price-mini">
+                            <span class="price-mini__normal">₴ 659</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-carousel">
+          <div class="products-carousel__container">
+            <div class="products-carousel__header products-carousel__header--recently">
+              <div class="products-carousel__header-title products-carousel__header-title--recently">
+                Недавно просмотренные
+              </div>
+            </div>
+
+            <div class="products-carousel__slider" id="recently_view">
+              <div class="products-carousel__navigation">
+                <button class="products-carousel__prev">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                  </svg>
+                </button>
+                <button class="products-carousel__next">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new1.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЦЕЛИН F1 / CELIN F1 - Арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 2 210</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new2.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 545</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new3.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        РАКЕЛЬ F1 / RAKEL F1 - Кукуруза сахарная, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 745</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new4.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЛЕЖЕНД F1 / LEGEND F1 – кукуруза сахарная, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 545</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product">
+                      <a href="#" class="product__image">
+                        <img src="img/new5.jpg" alt="">
+                      </a>
+                      <a href="#" class="product__title">
+                        ЧАРЛЬСТОН ГРЕЙ / CHARLESTON GRAY - арбуз, Clause
+                      </a>
+                      <div class="product__price price">
+                        <span class="price__normal">₴ 1 230</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-carousel">
+          <div class="products-carousel__container">
+            <div class="products-carousel__header">
+              <div class="products-carousel__header-title products-carousel__header-title--bestsellers">
+                <svg class="products-carousel__header-icon">
+                  <use xlink:href="img/sprite.svg#bestsellers"></use>
+                </svg>
+                Бестселлеры
+              </div>
+            </div>
+
+            <div class="products-carousel__static">
+              <div class="products-carousel__static-item">
+                <a href="#" class="products-carousel__static-link">
+                  <img src="img/best1.jpg" alt="">
+                </a>
+              </div>
+              <div class="products-carousel__static-item">
+                <a href="#" class="products-carousel__static-link">
+                  <img src="img/best2.jpg" alt="">
+                </a>
+              </div>
+              <div class="products-carousel__static-item">
+                <a href="#" class="products-carousel__static-link">
+                  <img src="img/best3.jpg" alt="">
+                </a>
+              </div>
+              <div class="products-carousel__static-item">
+                <a href="#" class="products-carousel__static-link">
+                  <img src="img/best4.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home__advantages advantages">
+          <div class="advantages__item">
+            <div class="advantages__inner">
+              <div class="advantages__image">
+                <img src="img/advantages1.png" alt="Гарантия качества">
+              </div>
+              <div class="advantages__title">Гарантия качества</div>
+              <div class="advantages__text">всех товаров в ассортименте</div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__inner">
+              <div class="advantages__image">
+                <img src="img/advantages2.png" alt="Честные цены на товары">
+              </div>
+              <div class="advantages__title">Честные цены на товары</div>
+              <div class="advantages__text">без магазинных наценок</div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__inner">
+              <div class="advantages__image">
+                <img src="img/advantages3.png" alt="Прямые поставки">
+              </div>
+              <div class="advantages__title">Прямые поставки</div>
+              <div class="advantages__text">с собственного склада</div>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__inner">
+              <div class="advantages__image">
+                <img src="img/advantages4.png" alt="Доставка по всей украине">
+              </div>
+              <div class="advantages__title">Доставка по всей украине</div>
+              <div class="advantages__text">отправка в течение 24 часов</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home__brands brands">
+          <div class="brands__slider" id="brands">
+            <div class="brands__slider-navigation">
+              <button class="brands__slider-prev">
+                <svg>
+                  <use xlink:href="img/sprite.svg#chevron-left-solid"></use>
+                </svg>
+              </button>
+              <button class="brands__slider-next">
+                <svg>
+                  <use xlink:href="img/sprite.svg#chevron-right-solid"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand1.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand2.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand3.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand5.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand6.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand7.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand8.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand9.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands__slide">
+                  <a href="#" class="brands__slide-link">
+                    <img src="img/brand10.jpg" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="home__about about-shop">
+          <div class="about-shop__text">
+            <h3 class="about-shop__title">
+              Хотите вырасти? Купить семена в интернет магазине Agrolife!
+            </h3>
+            <p>С помощью нашего интернет магазина семян вы можете выбрать и купить семена овощей европейских
+              производителей. Много лет мы - надежный партнер для фермерских хозяйств, агрофирм, сельскохозяйственных
+              производственных
+              кооперативов, а также тех, кто любит заниматься земледелием. Ведь очень приятно видеть, когда
+              обрабатываемая вами земля дает прекрасные и качественные ростки. Но большой урожай можно выращивать только
+              тогда, когда
+              есть возможность купить семена в Украине, которые отличаются уникальным качеством, а показатели
+              урожайности
+              удивляют самых заядлых овощеводов и садоводов-огородников.</p>
+            <p>Все больше людей покупают в интернет-магазинах (онлайн) товары с доставкой по Украине. Покупка семян,
+              цена которых в интернете значительно ниже, не стала исключением. Тем более, что любые сорта семян можно
+              доставить Новой почтой по Украине, а о том, что покупка доставлена, известит смс. Теперь и у вас есть
+              возможность,
+              не выходя из дома, заказать посевной материал в интернете магазине. Стоит только выбрать, какие сорта или
+              гибриды овощей необходимы.
+            </p>
+
+            <h3 class="about-shop__title">
+              Где купить семена недорого в Украине?
+            </h3>
+            <p>Известно, что в Украине существуют три основные агроклиматические зоны – Степь, Лесостепь и Полесье.
+              Каждая из них имеет свои типы почв, особенности климата, частотность осадков – а это все влияет на будущий
+              урожай.
+              Значит, для получения высокого урожая необходимо учитывать, какие семена овощей в Украине пользуются
+              спросом, каковы условия выращивания семян овощей, а также особенности агроклиматических зон.</p>
+            <p>Овощеводство развито везде в Украине. На Полесье, например, выращивают картофель, огурцы, морковь,
+              столовую
+              свёклу, капусту (белокочанную, краснокочанную, цветную, брокколи). В лесостепи условия благотворны для
+              выращивания огурцов, помидоров. В степи хорошо растут томаты, сладкий перец, баклажаны, а также бахчевые
+              культуры – арбузы, дыни, тыквы, кабачки, патиссоны. На всей территории Украины земледельцы выращивают
+              кукурузу, петрушку, укроп, фасоль, лук, редис, шпинат. Естественно, что существуют такие овощи, которые
+              требуют особого ухода, например, томаты. Необходимо выбрать, где вы будете выращивать помидоры: в теплицах
+              (индентерминантные томаты) или в открытом грунте (детерминантные томаты). А о качестве семян можете не
+              беспокоиться: закажите семена в нашем агромагазине. Не забывайте, что для улучшения урожайности
+              выращиваемых
+              овощей следует ориентироваться на высокопродуктивные гибриды, способные формировать урожайность как у
+              фермера-профессионала на поле, так и у любителя-овощевода на даче. А где купить посевной материал, который
+              бы
+              не подвел в вашей агроклиматической зоне? TM Agrolife предлагает исключительную возможность – подобрать
+              семена
+              в интернет магазине.</p>
+            <p>В нашем интернет-магазине семян вы приобретете семена овощей, которые имеют высокую приживаемость,
+              оптимальные
+              сроки созревания, европейский стандарт качества. Наш интернет магазин семян работает с лучшими
+              голландскими
+              и
+              французскими производителями, которые выращивают растения по европейским технологиям. Семена проходят
+              проверку
+              на всхожесть и качество, а также дополнительно проверяются на предмет отсутствия заболеваний и генных
+              мутаций.</p>
+          </div>
+
+          <button class="about-shop__read-more">Читать полностью</button>
+        </div>
+      </div>
+    </main>
+
+    @include('html/footer.html')
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

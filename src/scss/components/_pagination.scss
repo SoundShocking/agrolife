@@ -1,0 +1,54 @@
+.pagination {
+  border-top: 1px solid #e0e0e0;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover,
+    &--current {
+      background-color: var(--color-green);
+      border: 1px solid var(--color-green);
+      color: var(--color-white);
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    height: 32px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0px 50px 0 12px;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: right 10px center;
+    background-image: url('../img/select-chevron-down.svg');
+  }
+}
